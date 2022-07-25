@@ -239,7 +239,11 @@ fun LoginPageScreen() {
             Spacer(modifier = Modifier.size(16.dp))
             Button(
                 onClick = {
-                    mContext.startActivity(Intent(mContext, MainActivity::class.java))
+                    if (username == "Admin" && password == "Password*123."){
+                        mContext.startActivity(Intent(mContext, MainActivity::class.java))
+                    }else{
+
+                    }
 
                 },
                 modifier = Modifier
